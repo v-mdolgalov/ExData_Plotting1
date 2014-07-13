@@ -22,5 +22,5 @@ with(data2,{
 
 # Now exporting plot with RStudio or by executing this:
 
-dev.copy(png,'plot1.png')
+dev.copy(png,'plot2.png')
 dev.off()

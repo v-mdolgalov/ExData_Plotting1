@@ -6,6 +6,10 @@ Here you can conveniently see my resulting plots:
 
 ![My plot 1](plot1.png)
 
+### Plot 2:
+
+![My plot 2](plot2.png)
+
 ## Introduction
 
 This assignment uses data from

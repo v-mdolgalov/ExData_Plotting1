@@ -16,4 +16,8 @@ data2$theTime <- strptime(paste(data2$Date, data2$Time, ' '), format = '%m/%d/%Y
 # Creating the plot
 with(data2,{  hist(Global_active_power, col='red', main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)')}) # ?hist
 
-# Now exporting plot with RStudio (see screenshot1.png)
+# Now exporting plot with RStudio or by executing this:
+
+dev.copy(png,'plot1a.png')
+dev.off()
+

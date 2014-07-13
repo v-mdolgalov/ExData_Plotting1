@@ -17,7 +17,10 @@ nrow(data2)
 
 # Creating the plot
 with(data2,{  
-  plot(theTime, Global_active_power, type = 'l', ylab = 'Global Active Power (kilowatts)', xlab = '')
+  plot(theTime, Sub_metering_1, type = 'l', ylab = 'Energy sub metering', xlab = '')
+  lines(Sub_metering_2, col='red')
+  lines(Sub_metering_3, col='blue')
+  legend('topright', pch=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
   }) 
 
 # Now exporting plot with RStudio or by executing this:

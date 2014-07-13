@@ -21,10 +21,10 @@ with(data2,{
   hist(Global_active_power, col='red', main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)');
   plot(theTime, Global_active_power, type = 'l', ylab = 'Global Active Power (kilowatts)', xlab = ''); # ?plot
   plot(theTime, Sub_metering_1, type = 'l', ylab = 'Energy sub metering', xlab = '');
-  lines(Sub_metering_2, col='red');
-  lines(Sub_metering_3, col='blue');
-  legend('topright', pch=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
-  }) 
+  lines(theTime, Sub_metering_2, type = 'l', col='red');
+  points(theTime, Sub_metering_3, type = 'l', col='blue');
+  legend('topright', col=c('black', 'red', 'blue'), lty=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
+}) 
 
 # Now exporting plot with RStudio or by executing this:
 

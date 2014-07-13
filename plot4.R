@@ -16,7 +16,7 @@ data2 <- data1[data1$theDate == '2007-02-01' | data1$theDate == '2007-02-02', ]
 nrow(data2)
 
 # Creating the plot
-png('plot4.png', bg = "transparent") # ?png
+png('plot4.png', bg = "transparent", width = 500, height = 500 ) # ?plot
 par(mfrow = c(2, 2))
 with(data2,{  
   plot(theTime, Global_active_power, type = 'l', ylab = 'Global Active Power (kilowatts)', xlab = ''); # ?plot
@@ -24,11 +24,10 @@ with(data2,{
   plot(theTime, Sub_metering_1, type = 'l', ylab = 'Energy sub metering', xlab = '');
   lines(theTime, Sub_metering_2, type = 'l', col='red');
   points(theTime, Sub_metering_3, type = 'l', col='blue');
-  legend('topright', col=c('black', 'red', 'blue'), lty=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
-  plot(theTime, Global_reactive_power, type = 'l', xlab = 'Datetime', ylab = 'Global Reactive Power');
+  legend('topright', col=c('black', 'red', 'blue'), lty=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'),box.lwd = 0,box.col = "transparent", bg = "transparent", bty = 'no') #?legend
+  plot(theTime, Global_reactive_power, col = '#3F3F3F', type = 'l', xlab = 'Datetime', ylab = 'Global Reactive Power', lwd = 0.1);
 }) 
 dev.off()
-
 # Now exporting plot with RStudio or by executing this (if the plot was shown on the screen):
 
 dev.copy(png,'plot4.png')

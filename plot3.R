@@ -15,6 +15,9 @@ head(data1)
 data2 <- data1[data1$theDate == '2007-02-01' | data1$theDate == '2007-02-02', ]
 nrow(data2)
 
+# let's switch output to .png file (with default resolution 480x480
+png('plot3.png', bg = "transparent")
+
 # Creating the plot
 with(data2,{  
   plot(theTime, Sub_metering_1, type = 'l', ylab = 'Energy sub metering', xlab = '');
@@ -23,7 +26,10 @@ with(data2,{
   legend('topright', col=c('black', 'red', 'blue'), lty=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
 }) 
 
-# Now exporting plot with RStudio or by executing this:
+# close plot png file
+dev.off()
+
+# If we got the plot on screen we can export it executing this:
 
 dev.copy(png,'plot3.png')
 dev.off()

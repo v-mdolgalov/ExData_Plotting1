@@ -1,5 +1,8 @@
 ## My results:
-Plot 1:
+
+Here you can conveniently see my resulting plots:
+
+### Plot 1:
 
 ![My plot 1](plot1.png)
 

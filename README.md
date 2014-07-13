@@ -1,3 +1,8 @@
+## My results:
+Plot 1:
+
+![My plot 1](plot1.png)
+
 ## Introduction
 
 This assignment uses data from

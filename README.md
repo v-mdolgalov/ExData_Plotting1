@@ -10,6 +10,14 @@ Here you can conveniently see my resulting plots:
 
 ![My plot 2](plot2.png)
 
+### Plot 3:
+
+![My plot 3](plot3.png)
+
+### Plot 4:
+
+![My plot 4](plot4.png)
+
 ## Introduction
 
 This assignment uses data from

@@ -16,8 +16,14 @@ data2 <- data1[data1$theDate == '2007-02-01' | data1$theDate == '2007-02-02', ]
 nrow(data2)
 
 # Creating the plot
+par(mfrow = c(2, 2))
 with(data2,{  
-  plot(theTime, Global_active_power, type = 'l', ylab = 'Global Active Power (kilowatts)', xlab = '')
+  hist(Global_active_power, col='red', main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)');
+  plot(theTime, Global_active_power, type = 'l', ylab = 'Global Active Power (kilowatts)', xlab = ''); # ?plot
+  plot(theTime, Sub_metering_1, type = 'l', ylab = 'Energy sub metering', xlab = '');
+  lines(Sub_metering_2, col='red');
+  lines(Sub_metering_3, col='blue');
+  legend('topright', pch=1, legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
   }) 
 
 # Now exporting plot with RStudio or by executing this:
